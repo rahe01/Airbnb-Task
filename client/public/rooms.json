@@ -1,0 +1,229 @@
+
+ [
+    {
+      "title": "Deori Room 1BR Daafi w/Mountain View",
+      "description": "Credibly incentivize stand-alone technology rather than unique convergences.",
+      "images": [
+        "https://i.ibb.co/Gp0Svsb/b2c0f556-f726-4db8-985f-25a668369fe7.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp",
+     
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp"
+      
+      ],
+      "location": "Theog, India",
+      "category": "Countryside",
+      "price": 50,
+      "guests": 3,
+      "bathrooms": 2,
+      "bedrooms": 2,
+      "Booked": false,
+      "dateRange": {
+        "from": "2024-05-27T18:00:00.000Z",
+        "to": "2024-05-30T18:00:00.000Z"
+      }
+    },
+    {
+      "title": "Beachfront Villa with Private Pool",
+      "description": "Luxurious beachfront villa with a private pool and stunning views.",
+      "images": [
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp",
+        "https://i.ibb.co/Gp0Svsb/b2c0f556-f726-4db8-985f-25a668369fe7.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp"
+      ],
+      "location": "Pataya, Thailand",
+      "category": "Beach",
+      "price": 120,
+      "guests": 6,
+      "bathrooms": 3,
+      "bedrooms": 4,
+      "Booked": true,
+      "dateRange": {
+        "from": "2024-06-01T18:00:00.000Z",
+        "to": "2024-06-10T18:00:00.000Z"
+      }
+    },
+    {
+      "title": "Lux Mountain Chalet",
+      "description": "Modern chalet with panoramic mountain views and luxury amenities.",
+      "images": [
+        "https://i.ibb.co/Gp0Svsb/b2c0f556-f726-4db8-985f-25a668369fe7.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp",
+        
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp"
+      ],
+      "location": "Aspen, USA",
+      "category": "Skiing",
+      "price": 200,
+      "guests": 8,
+      "bathrooms": 4,
+      "bedrooms": 5,
+      "Booked": false,
+      "dateRange": {
+        "from": "2024-12-15T18:00:00.000Z",
+        "to": "2024-12-25T18:00:00.000Z"
+      }
+    },
+    {
+      "title": "Rustic Barn Retreat",
+      "description": "Experience countryside life in this charming rustic barn retreat.",
+      "images": [
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+    
+        "https://i.ibb.co/Gp0Svsb/b2c0f556-f726-4db8-985f-25a668369fe7.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp"
+      ],
+      "location": "Texas, USA",
+      "category": "Barns",
+      "price": 80,
+      "guests": 4,
+      "bathrooms": 2,
+      "bedrooms": 3,
+      "Booked": false,
+      "dateRange": {
+        "from": "2024-09-05T18:00:00.000Z",
+        "to": "2024-09-10T18:00:00.000Z"
+      }
+    },
+    {
+      "title": "Island Paradise Villa",
+      "description": "Private villa on a secluded island with breathtaking ocean views.",
+      "images": [
+        "https://i.ibb.co/Gp0Svsb/b2c0f556-f726-4db8-985f-25a668369fe7.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp",
+        
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp"
+      ],
+      "location": "Maldives",
+      "category": "Islands",
+      "price": 300,
+      "guests": 5,
+      "bathrooms": 3,
+      "bedrooms": 3,
+      "Booked": true,
+      "dateRange": {
+        "from": "2024-07-01T18:00:00.000Z",
+        "to": "2024-07-08T18:00:00.000Z"
+      }
+    },
+    {
+      "title": "Luxury Castle Stay",
+      "description": "Live like royalty in a restored ancient castle with modern comforts.",
+      "images": [
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp",
+        "https://i.ibb.co/Gp0Svsb/b2c0f556-f726-4db8-985f-25a668369fe7.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp"
+      ],
+      "location": "Edinburgh, Scotland",
+      "category": "Castles",
+      "price": 500,
+      "guests": 10,
+      "bathrooms": 5,
+      "bedrooms": 6,
+      "Booked": false,
+      "dateRange": {
+        "from": "2024-08-15T18:00:00.000Z",
+        "to": "2024-08-22T18:00:00.000Z"
+      }
+    },
+    {
+      "title": "Desert Oasis Camp",
+      "description": "A peaceful desert retreat with traditional tents and modern amenities.",
+      "images": [
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp",
+        "https://i.ibb.co/Gp0Svsb/b2c0f556-f726-4db8-985f-25a668369fe7.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp"
+      ],
+      "location": "Dubai, UAE",
+      "category": "Desert",
+      "price": 150,
+      "guests": 2,
+      "bathrooms": 1,
+      "bedrooms": 1,
+      "Booked": true,
+      "dateRange": {
+        "from": "2024-11-10T18:00:00.000Z",
+        "to": "2024-11-15T18:00:00.000Z"
+      }
+    },
+    {
+      "title": "Forest Cabin Adventure",
+      "description": "Immerse yourself in nature in this cozy cabin surrounded by forest.",
+      "images": [
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp",
+        "https://i.ibb.co/Gp0Svsb/b2c0f556-f726-4db8-985f-25a668369fe7.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp"
+      ],
+      "location": "Yosemite, USA",
+      "category": "Camping",
+      "price": 70,
+      "guests": 3,
+      "bathrooms": 1,
+      "bedrooms": 2,
+      "Booked": false,
+      "dateRange": {
+        "from": "2024-09-20T18:00:00.000Z",
+        "to": "2024-09-25T18:00:00.000Z"
+      }
+    },
+    {
+      "title": "Windmill Cottage",
+      "description": "Charming windmill cottage with stunning views and modern amenities.",
+      "images": [
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp",
+        "https://i.ibb.co/Gp0Svsb/b2c0f556-f726-4db8-985f-25a668369fe7.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp"
+      ],
+      "location": "Santorini, Greece",
+      "category": "Windmills",
+      "price": 110,
+      "guests": 4,
+      "bathrooms": 2,
+      "bedrooms": 2,
+      "Booked": true,
+      "dateRange": {
+        "from": "2024-10-10T18:00:00.000Z",
+        "to": "2024-10-17T18:00:00.000Z"
+      }
+    },
+    {
+      "title": "Snowy Cabin Retreat",
+      "description": "Cozy cabin in a winter wonderland with beautiful snowy views.",
+      "images": [
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp",
+        "https://i.ibb.co/Gp0Svsb/b2c0f556-f726-4db8-985f-25a668369fe7.webp",
+        "https://i.ibb.co/Ptxx4q2/15110762-267f-4a08-88ae-2d9d3603284d.webp",
+        "https://i.ibb.co/BsLQWH6/992ceffe-86d2-42b0-93b8-c24427806cca.webp"
+      ],
+      "location": "Banff, Canada",
+      "category": "Arctic",
+      "price": 90,
+      "guests": 4,
+      "bathrooms": 2,
+      "bedrooms": 3,
+      "Booked": false,
+      "dateRange": {
+        "from": "2024-12-01T18:00:00.000Z",
+        "to": "2024-12-07T18:00:00.000Z"
+      }
+    }
+  ]
+
