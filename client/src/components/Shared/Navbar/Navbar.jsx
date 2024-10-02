@@ -3,8 +3,9 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiGlobe } from "react-icons/fi";
-
 import avatarImg from "../../../assets/images/placeholder.jpg";
+import DateSelector from "./DateSelector";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +19,12 @@ const Navbar = () => {
             <Link to="/">
               <img src="https://iili.io/dt0sH0B.png" width="100" height="100" />
             </Link>
+
+            {/* DateSelector in the center */}
+            <div className="flex-grow flex justify-center">
+              <DateSelector />
+            </div>
+
             {/* Dropdown Menu */}
             <div className="relative">
               <div className="flex flex-row items-center gap-3">
