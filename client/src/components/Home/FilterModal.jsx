@@ -12,7 +12,7 @@ const FilterModal = ({ isOpen, closeModal, onApplyFilter }) => {
     const fetchFilteredRooms = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/rooms/price-range?minPrice=${priceRange[0]}&maxPrice=${priceRange[1]}`
+          `https://server-zeta-sand.vercel.app/rooms/price-range?minPrice=${priceRange[0]}&maxPrice=${priceRange[1]}`
         );
         setFilteredRooms(response.data);
       } catch (error) {
