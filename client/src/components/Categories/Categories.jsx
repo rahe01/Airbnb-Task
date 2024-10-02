@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios"; 
 import Container from "../Shared/Container";
 import CategoryBox from "./CategoryBox";
@@ -6,19 +6,35 @@ import { categories } from "./CategoriesData";
 import { Switch } from "@headlessui/react";
 import { RiSoundModuleFill } from "react-icons/ri";
 import FilterModal from "../Home/FilterModal";
-
+import Card from "../Home/Card";
 
 const VITE_API_URL = import.meta.env.VITE_API_URL;
 
 const Categories = () => {
   const [isBeforeTax, setIsBeforeTax] = useState(false);
-  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false); // State to manage modal visibility
+  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+  const [filteredRooms, setFilteredRooms] = useState([]); // Store filtered data
+  const [rooms, setRooms] = useState([]); // Store all rooms
 
-  // Function to handle toggle change
+  useEffect(() => {
+    // Fetch rooms when component mounts
+    const fetchRooms = async () => {
+      try {
+        const response = await axios.get(`${VITE_API_URL}/rooms`);
+        setRooms(response.data);
+      } catch (error) {
+        console.error("Failed to fetch rooms:", error);
+      }
+    };
+    fetchRooms();
+  }, []);
+
+  // Function to handle toggle change for tax status
   const handleToggleChange = async (value) => {
     setIsBeforeTax(value);
 
     try {
+      // Send a PATCH request to update tax status in the DB
       const response = await axios.patch(
         `${VITE_API_URL}/rooms/update-tax-status`,
         { priceWithTaxShow: value },
@@ -45,6 +61,12 @@ const Categories = () => {
     setIsFilterModalOpen(false);
   };
 
+  // Function to update filtered rooms when closing modal
+  const handleFilteredRoomsUpdate = (rooms) => {
+    setFilteredRooms(rooms);
+    setIsFilterModalOpen(false); // Close modal after applying filter
+  };
+
   return (
     <Container>
       <div className="flex justify-center items-center">
@@ -62,7 +84,7 @@ const Categories = () => {
             <div className="flex items-center">
               {/* Filter Button to open the modal */}
               <button
-                onClick={openFilterModal} // Opens the modal on click
+                onClick={openFilterModal}
                 className="ml-4 rounded-2xl bg-white p-3 text-black border hover:border-black border-gray-400 hover:bg-gray-200 flex items-center"
               >
                 <RiSoundModuleFill className="mr-1" />
@@ -95,8 +117,25 @@ const Categories = () => {
         </div>
       </div>
 
+      {/* Show Filtered Results */}
+      {filteredRooms.length > 0 && (
+  <div className="pt-12">
+    <h3 className="text-lg font-semibold mb-4">Filtered Rooms: By Price</h3>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8 border-b-2 border-red-400 mt-4">
+      {filteredRooms.map((room) => (
+        <Card room={room} key={room._id} />
+      ))}
+    </div>
+  </div>
+)}
+
+
       {/* Filter Modal */}
-      <FilterModal isOpen={isFilterModalOpen} closeModal={closeFilterModal} />
+      <FilterModal 
+        isOpen={isFilterModalOpen} 
+        closeModal={closeFilterModal} 
+        onApplyFilter={handleFilteredRoomsUpdate} // Pass function to update filtered rooms
+      />
     </Container>
   );
 };

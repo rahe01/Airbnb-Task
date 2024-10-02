@@ -116,6 +116,27 @@ app.get("/rooms/price-range", async (req, res) => {
 });
 
 
+
+// Get rooms based on price range and priceWithTaxShow
+app.get("/rooms/price-range", async (req, res) => {
+  try {
+    const minPrice = parseInt(req.query.minPrice, 10);
+    const maxPrice = parseInt(req.query.maxPrice, 10);
+    const priceWithTaxShow = req.query.priceWithTaxShow === 'true'; // Convert query to boolean
+
+    const query = priceWithTaxShow
+      ? { priceWithTax: { $gte: minPrice, $lte: maxPrice } }
+      : { price: { $gte: minPrice, $lte: maxPrice } };
+
+    const result = await roomsCollection.find(query).toArray();
+    res.send(result);
+  } catch (error) {
+    res.status(500).send({ message: "Failed to fetch rooms by price range" });
+  }
+});
+
+
+
     // Ping MongoDB
     await client.db('admin').command({ ping: 1 });
     console.log('Successfully connected to MongoDB!');

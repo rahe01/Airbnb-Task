@@ -3,7 +3,7 @@ import { IoClose } from "react-icons/io5";
 import AirbnbSlider from "./AirbnbSlider"; // Import the AirbnbSlider component
 import axios from "axios";
 
-const FilterModal = ({ isOpen, closeModal }) => {
+const FilterModal = ({ isOpen, closeModal, onApplyFilter }) => {
   const [priceRange, setPriceRange] = useState([10, 4300]);
   const [filteredRooms, setFilteredRooms] = useState([]);
 
@@ -24,10 +24,14 @@ const FilterModal = ({ isOpen, closeModal }) => {
     if (isOpen) {
       fetchFilteredRooms();
     }
-  }, [priceRange, isOpen]); // Dependency array includes priceRange and isOpen
+  }, [priceRange, isOpen]);
 
   const handleClearAll = () => {
     setPriceRange([10, 4300]);
+  };
+
+  const handleApplyFilter = () => {
+    onApplyFilter(filteredRooms); // Apply filtered rooms when button clicked
   };
 
   if (!isOpen) return null;
@@ -62,8 +66,6 @@ const FilterModal = ({ isOpen, closeModal }) => {
           </div>
         </div>
 
-    
-
         <div className="flex justify-between items-center mt-6">
           <button
             onClick={handleClearAll}
@@ -72,7 +74,7 @@ const FilterModal = ({ isOpen, closeModal }) => {
             Clear all
           </button>
           <button
-            onClick={closeModal}
+            onClick={handleApplyFilter} // Apply filter and close modal
             className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900"
           >
             Show {filteredRooms.length} places
