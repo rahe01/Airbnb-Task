@@ -69,20 +69,34 @@ async function run() {
 
 
 
-    // Get all rooms from the DB
-    app.get("/rooms", async (req, res) => {
-      try {
-        const category = req.query.category;
-        let query = {};
-        if (category && category != "null") {
-          query = { category };
-        }
-        const result = await roomsCollection.find(query).toArray();
-        res.send(result);
-      } catch (error) {
-        res.status(500).send({ message: "Failed to fetch rooms" });
-      }
-    });
+// Get all rooms from the DB
+app.get("/rooms", async (req, res) => {
+  try {
+    const category = req.query.category;
+    const checkInDate = req.query.checkInDate ? new Date(req.query.checkInDate) : null;
+    const checkOutDate = req.query.checkOutDate ? new Date(req.query.checkOutDate) : null;
+
+    let query = {};
+    if (category && category !== "null") {
+      query.category = category; // Filter by category if provided
+    }
+
+    if (checkInDate && checkOutDate) {
+      // Filter rooms based on date range
+      query.$or = [
+        { "dateRange.from": { $gte: checkOutDate } }, // Room is available if its start date is after the check-out date
+        { "dateRange.to": { $lte: checkInDate } }, // Room is available if its end date is before the check-in date
+      ];
+    }
+
+    const result = await roomsCollection.find(query).toArray();
+    res.send(result);
+  } catch (error) {
+    console.error("Failed to fetch rooms:", error); // Log the error for debugging
+    res.status(500).send({ message: "Failed to fetch rooms" });
+  }
+});
+
 
     // Update priceWithTaxShow for all rooms
     app.patch("/rooms/update-tax-status", async (req, res) => {
@@ -134,6 +148,29 @@ app.get("/rooms/price-range", async (req, res) => {
     res.status(500).send({ message: "Failed to fetch rooms by price range" });
   }
 });
+
+
+// Get rooms based on date range
+app.get("/rooms/date-range", async (req, res) => {
+  try {
+    const { checkIn, checkOut } = req.query; // Expecting ISO date strings
+    const checkInDate = new Date(checkIn);
+    const checkOutDate = new Date(checkOut);
+
+    const query = {
+      dateRange: {
+        from: { $lte: checkOutDate }, // Check-in date should be before check-out date
+        to: { $gte: checkInDate },    // Check-out date should be after check-in date
+      }
+    };
+
+    const result = await roomsCollection.find(query).toArray();
+    res.send(result);
+  } catch (error) {
+    res.status(500).send({ message: "Failed to fetch rooms by date range" });
+  }
+});
+
 
 
 

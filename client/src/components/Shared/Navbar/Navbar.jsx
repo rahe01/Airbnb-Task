@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiGlobe } from "react-icons/fi";
 import avatarImg from "../../../assets/images/placeholder.jpg";
-import DateSelector from "./DateSelector";
+
 
 
 const Navbar = () => {
@@ -21,9 +21,7 @@ const Navbar = () => {
             </Link>
 
             {/* DateSelector in the center */}
-            <div className="flex-grow flex justify-center">
-              <DateSelector />
-            </div>
+          
 
             {/* Dropdown Menu */}
             <div className="relative">
